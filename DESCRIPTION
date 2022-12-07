@@ -1,0 +1,19 @@
+Package: AdvancedR3
+Type: Project
+Version: 0.0.1
+Imports:
+    knitr,
+    rmarkdown,
+    distill,
+    readxl,
+    dplyr,
+    tidyr,
+    here,
+    stringr,
+    snakecase,
+    usethis,
+    fs
+Encoding: UTF-8
+Depends: 
+    R (>= 2.10)
+LazyData: true
