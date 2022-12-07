@@ -7,5 +7,5 @@ options(
 if (interactive()) {
     suppressMessages(require(usethis))
 }
-usethis::use_package("renv", "suggests")
+
 
