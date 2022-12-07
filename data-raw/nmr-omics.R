@@ -79,7 +79,7 @@ lipidomics
 
 usethis::use_git()
 1
-# checking for package dependency and whether installed, adds line in Description #no lint
+# checking for package dependency and whether installed, adds line in Description # no lint
 
 ?usethis::use_package
 usethis::use_package("readxl")
