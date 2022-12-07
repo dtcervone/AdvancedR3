@@ -81,6 +81,7 @@ lipidomics
 
 usethis::use_git()
 1
+#checking for package dependency and whether installed, adds line in Description file
 
 ?usethis::use_package
 usethis::use_package("readxl")
@@ -93,3 +94,5 @@ usethis::use_package("usethis")
 usethis::use_package("fs")
 
 usethis::use_git_ignore(".Rbuildignore")
+
+# by default, use .libPaths() to find where packages are stored in case you need to delete
