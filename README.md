@@ -1,26 +1,33 @@
-TODO: Add more to the title of your project here
+---
+editor_options:
+  markdown:
+    wrap: 72
+    canonical: true
+---
+
+TODO: New title of R3advancedProject
 
 # AdvancedR3:
 
-TODO: Give a brief description of what your project is about
-
-This project...
+TODO: Complete exercise 5.15 of R3advanced
 
 # Brief description of folder and file contents
 
-TODO: As project evolves, add brief description of what is inside the data, doc and R folders.
+TODO: As project evolves, add brief description of what is inside the
+data, doc and R folders.
 
 The following folders contain:
 
-- `data/`:
-- `doc/`:
-- `R/`:
+-   `data/`: formatted data
+-   `doc/`: lesson R markdown
+-   `R/`: functions
 
 # Installing project R package dependencies
 
-If dependencies have been managed by using `usethis::use_package("packagename")`
-through the `DESCRIPTION` file, installing dependencies is as easy as opening the
-`AdvancedR3.Rproj` file and running this command in the console:
+If dependencies have been managed by using
+`usethis::use_package("packagename")` through the `DESCRIPTION` file,
+installing dependencies is as easy as opening the `AdvancedR3.Rproj`
+file and running this command in the console:
 
     # install.packages("remotes")
     remotes::install_deps()
