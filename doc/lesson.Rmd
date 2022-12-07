@@ -2,6 +2,10 @@
 title: "Draft R Markdown document"
 author: "Your Name"
 output: html_document
+editor_options:
+  markdown:
+    wrap: 72
+    canonical: true
 ---
 
 ```{r setup, include=FALSE}
@@ -25,6 +29,7 @@ usethis::use_package("fs")
 
 usethis::use_git_ignore(".Rbuildignore")
 ```
+
 ```{r}
 library(dplyr)
 load(here::here("data/lipidomics.rda"))
@@ -32,3 +37,7 @@ lipidomics %>%
   select(gender, age) %>%
   filter(age >= 25)
 ```
+
+## HEADER
+
+-   list one
