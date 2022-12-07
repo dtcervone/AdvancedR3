@@ -91,3 +91,5 @@ usethis::use_package("snakecase")
 usethis::use_package("stringr")
 usethis::use_package("usethis")
 usethis::use_package("fs")
+
+usethis::use_git_ignore(".Rbuildignore")

@@ -5,3 +5,4 @@ data-raw/nmr-omics/
 .Rdata
 .httr-oauth
 .DS_Store
+.Rbuildignore
