@@ -25,3 +25,11 @@ usethis::use_package("fs")
 
 usethis::use_git_ignore(".Rbuildignore")
 ```
+```{r}
+library(dplyr)
+load ( here::here( "data/lipidomics.rda") 
+)
+lipidomics%>%select(gender , age)%>%filter(age>=25)
+```
+
+
