@@ -9,6 +9,24 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-# Code chunk
+usethis::use_git()
+1
+#checking for package dependency and whether installed, adds line in Description
+
+?usethis::use_package
+usethis::use_package("readxl")
+usethis::use_package("dplyr")
+usethis::use_package("tidyr")
+usethis::use_package("here")
+usethis::use_package("snakecase")
+usethis::use_package("stringr")
+usethis::use_package("usethis")
+usethis::use_package("fs")
+
+usethis::use_git_ignore(".Rbuildignore")
+
+# by default, use .libPaths() to find where packages are stored in case you need to delete
+
+
 ```
 
