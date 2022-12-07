@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 usethis::use_git()
 1
-#checking for package dependency and whether installed, adds line in Description
+# checking for package dependency and whether installed, adds line in Description
 
 ?usethis::use_package
 usethis::use_package("readxl")
