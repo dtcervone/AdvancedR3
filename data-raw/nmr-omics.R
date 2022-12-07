@@ -96,3 +96,4 @@ usethis::use_package("fs")
 usethis::use_git_ignore(".Rbuildignore")
 
 # by default, use .libPaths() to find where packages are stored in case you need to delete
+
