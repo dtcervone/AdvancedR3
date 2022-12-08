@@ -9,35 +9,13 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r}
-usethis::use_git()
-1
-# check package dependency and whether installed, adds line in Description
-
-?usethis::use_package
-usethis::use_package("readxl")
-usethis::use_package("dplyr")
-usethis::use_package("tidyr")
-usethis::use_package("here")
-usethis::use_package("snakecase")
-usethis::use_package("stringr")
-usethis::use_package("usethis")
-usethis::use_package("fs")
-
-usethis::use_git_ignore(".Rbuildignore")
-```
-
-```{r}
-library(dplyr)
+library(tidyverse)
+source(here::here("R/functions.R"))
 load(here::here("data/lipidomics.rda"))
-lipidomics %>%
-  select(gender, age) %>%
-  filter(age >= 25)
 ```
 
-## HEADER
+## Basic statistics
 
--   list one
+```{r}
+descriptive_stats(lipidomics)
+```

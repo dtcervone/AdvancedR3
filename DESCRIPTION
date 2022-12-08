@@ -12,10 +12,12 @@ Imports:
     stringr,
     snakecase,
     usethis,
-    fs
+    fs,
+    targets
 Encoding: UTF-8
 Depends: 
-    R (>= 2.10)
+    R (>= 2.10),
+    tidyverse
 LazyData: true
 Suggests: 
     lintr,
