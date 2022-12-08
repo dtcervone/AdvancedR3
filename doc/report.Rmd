@@ -10,9 +10,10 @@ date: "`r Sys.Date()`"
 ---
 
 ```{r setup, include=FALSE}
+targets::tar_config_set(store = here::here("_targets"))
 library(tidyverse)
 library(targets)
-lipidomics <- targets::tar_read(lipidomics, store = here::here("_targets"))
+lipidomics <- targets::tar_read(lipidomics)
 
 ```
 
@@ -32,17 +33,17 @@ Conclusions:
 
 # Results
 ```{r echo = FALSE}
-tar_read(df_stats_by_metabolite, store = here::here("_targets")) %>% 
+tar_read(df_stats_by_metabolite) %>% 
   mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) %>% 
   knitr::kable(caption = "Descriptive statistics of metabolites.")
 ```
 
 ```{r echo = FALSE}
-tar_read(fig_gender_by_class, store = here::here("_targets"))
+tar_read(fig_gender_by_class)
 ```
 
 ```{r echo = FALSE}
-tar_read(fig_metabolite_distribution, store = here::here("_targets"))
+tar_read(fig_metabolite_distribution)
 ```
 
 # Conclusions
