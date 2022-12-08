@@ -9,9 +9,12 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
+targets::tar_config_set(store = here::here("_targets"))
 library(tidyverse)
+library(targets)
+library(tidymodels)
+lipidomics <- targets::tar_read(lipidomics)
 source(here::here("R/functions.R"))
-lipidomics <- readr::read_csv(here::here("data/lipidomics.csv"), show_col_types = FALSE)
 ```
 
 ## Basic statistics
@@ -35,4 +38,55 @@ metabolite_distribution_plot <- ggplot(lipidomics, aes(x = value)) +
   geom_histogram() +
   facet_wrap(vars(metabolite), scales = "free")
 metabolite_distribution_plot
+```
+
+## Building the model
+
+```{r}
+log_reg_specs <- logistic_reg() %>%
+  set_engine("glm")
+log_reg_specs
+```
+
+## Exercise 7.5
+
+### Linear regression model definition
+
+```{r}
+linear_reg_specs <- linear_reg() %>% 
+  set_engine("lm")
+linear_reg_specs
+```
+
+## Inspect data, need to wrangle data a bit pre-modeling
+
+```{r}
+lipidomics %>% 
+  count(code, metabolite) %>% 
+  filter(n > 1)
+```
+
+## Mutate the data
+
+```{r}
+lipidomics_wide <- lipidomics %>%
+  mutate(metabolite = snakecase::to_snake_case(metabolite)) %>%
+  pivot_wider(
+    names_from = metabolite, 
+    values_from = value, 
+    values_fn = mean,
+    names_prefix = "metabolite_"
+  )
+lipidomics_wide
+```
+
+## Create function for var to snakecase
+
+```{r}
+metabolite_values_to_snakecase <- function(data) {
+  data %>% 
+    dplyr::mutate(metabolite = snakecase::to_snake_case(metabolite))
+}
+lipidomics %>% 
+  metabolite_values_to_snakecase
 ```

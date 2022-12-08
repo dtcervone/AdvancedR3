@@ -33,3 +33,14 @@ plot_distributions <- function(data) {
     ggplot2::geom_histogram() +
     ggplot2::facet_wrap(ggplot2::vars(metabolite), scales = "free")
 }
+
+
+#' Function for mutating column of interest
+#'
+#' @param data Lipidomics metabolite column data
+#'
+#' @return wide version of data table
+metabolite_values_to_snakecase <- function(data) {
+  data %>%
+    dplyr::mutate(metabolite = snakecase::to_snake_case(metabolite))
+}
