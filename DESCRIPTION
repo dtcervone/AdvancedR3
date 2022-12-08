@@ -11,6 +11,7 @@ Imports:
     dplyr,
     fs,
     ggplot2,
+    glue,
     here,
     knitr,
     readr,
@@ -18,6 +19,7 @@ Imports:
     rmarkdown,
     snakecase,
     stringr,
+    tarchetypes,
     targets,
     tidyr,
     usethis

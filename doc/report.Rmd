@@ -1,0 +1,58 @@
+---
+# Uses Quarto metadata: https://quarto.org/docs/journals/authors.html
+title: "R3advanced"
+author:
+  - name: ""
+    orcid: ""
+    affiliations: 
+        - name: ""
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(targets)
+lipidomics <- targets::tar_read(lipidomics, store = here::here("_targets"))
+
+```
+
+# Abstract
+
+Objective:
+
+Research Design and Methods:
+
+Results:
+
+Conclusions:
+
+# Introduction 
+
+# Research Design and Methods
+
+# Results
+```{r echo = FALSE}
+tar_read(df_stats_by_metabolite, store = here::here("_targets")) %>% 
+  mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) %>% 
+  knitr::kable(caption = "Descriptive statistics of metabolites.")
+```
+
+```{r echo = FALSE}
+tar_read(fig_gender_by_class, store = here::here("_targets"))
+```
+
+```{r echo = FALSE}
+tar_read(fig_metabolite_distribution, store = here::here("_targets"))
+```
+
+# Conclusions
+
+# Acknowledgements
+
+# References
+
+# Tables
+
+# Figures
+
+# Supplemental Material
