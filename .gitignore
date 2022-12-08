@@ -6,3 +6,5 @@ data-raw/nmr-omics/
 .httr-oauth
 .DS_Store
 .Rbuildignore
+data/lipidomics.csv
+_targets

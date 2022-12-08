@@ -1,4 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-descriptive_stats|function|e8226682bcc2ea0e|||||||||||||||
-df_stats_by_metabolite|stem||06bc50c38cf95e77|4c14a9930382152b|1571712024||t19334.414993551s||0|rds|local|vector|||0.285||no applicable method for group_by applied to an object of class character
-lipidomics|stem|4fcdc4d47c583804|c67d870f378b6dd4|168b40b1ebae34e1|-1170387675||t19334.4149900189s|b2c2d69496a0fbf4|63|rds|local|vector|||0.047||
+descriptive_stats|function|b772cbe35d458110|||||||||||||||
+df_stats_by_metabolite|stem|57aaa6daf0a9ef83|06bc50c38cf95e77|f19f2f9a4734405c|1571712024||t19334.4403229992s|7f6efb6d9faceac0|456|rds|local|vector|||0.029||
+file|stem|301125be9d4645ea|41619bbc02c4928d|c3b5fc02cdc369c1|-1301001980|/Users/fld713/Desktop/AdvancedR3/data/lipidomics.csv|t19334.4190355596s|6f631a918b070454|24313|file|local|vector|||0.054||
+lipidomics|stem|6b48e6774467e8bd|7940706ee8ea8eb8|845f6234952721f6|-1170387675||t19334.4274364704s|30e7dd23cf8c9239|4884|rds|local|vector|||0.523||

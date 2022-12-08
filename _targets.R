@@ -9,7 +9,7 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-  packages = c("tibble"), # packages that your targets need to run
+  packages = desc::desc_get_deps()$package[-1], # packages that your targets need to run
   format = "rds" # default storage format
   # Set other options as needed.
 )
@@ -27,8 +27,13 @@ tar_source()
 # Replace the target list below with your own:
 list(
   tar_target(
+    name = file,
+    command = here::here("data/lipidomics.csv"),
+    format = "file"
+  ),
+  tar_target(
     name = lipidomics,
-    command = load(here::here("data/lipidomics.rda"))
+    command = readr::read_csv(file, show_col_types = FALSE)
   ),
   tar_target(
     name = df_stats_by_metabolite,
