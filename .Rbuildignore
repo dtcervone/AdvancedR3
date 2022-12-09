@@ -2,3 +2,4 @@
 ^renv\.lock$
 ^data-raw$
 ^\.github$
+^LICENSE\.md$

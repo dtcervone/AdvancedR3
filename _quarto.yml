@@ -8,6 +8,9 @@ website:
         text: Home
       - href: doc/report.Rmd
         text: "Report"
+  page-footer:
+    center:
+      - text: "License: CC BY 4.0"
 format:
   html:
     theme: yeti
@@ -26,3 +29,4 @@ execute:
   freeze: auto
   warning: false
   echo: false
+
