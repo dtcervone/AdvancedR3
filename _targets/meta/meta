@@ -1,10 +1,22 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+add_original_metabolite_names|function|bb45b2ab854a87ac|||||||||||||||
+calculate_estimates|function|fab6be444ce8954e|||||||||||||||
+column_values_to_snakecase|function|074e817e19db405b|||||||||||||||
+create_model_workflow|function|60065308e570c7e4|||||||||||||||
+create_recipe_spec|function|275e43bdda3dd47a|||||||||||||||
 descriptive_stats|function|b772cbe35d458110|||||||||||||||
+df_model_estimates|stem|4eb393bd0ef9e04a|c54121e4cf891739|ea9c362e7caf76c5|694756191||t19335.5217626767s|dff923d388a70b81|856|rds|local|vector|||2.051|glm.fit algorithm did not converge. glm.fit fitted probabilities numerically 0 or 1 occurred. glm.fit fitted probabilities numerically 0 or 1 occurred|
 df_stats_by_metabolite|stem|57aaa6daf0a9ef83|06bc50c38cf95e77|f19f2f9a4734405c|1571712024||t19334.4403229992s|7f6efb6d9faceac0|456|rds|local|vector|||0.029||
 fig_gender_by_class|stem|bfe844466bc3ad37|ab3da35e0abf2b38|d33ffa407a0c5ac9|-1588904170||t19334.4721272835s|c1ae7801b01a7a83|51700|rds|local|vector|||0.014||
 fig_metabolite_distribution|stem|2d7b9ecc760cfe51|fab028a148ebe7e6|8eec9d07bc38c11b|1263992679||t19334.4721280355s|bfec1c030f0bbf38|80948|rds|local|vector|||0.007||
+fig_model_estimates|stem|5602553ceeb8bd8a|16a1b6385d9d61a3|c92becbeb51aca89|1462996731||t19335.5540448233s|c9bc2c25ef5f2275|41033|rds|local|vector|||0.01||
 file|stem|301125be9d4645ea|41619bbc02c4928d|c3b5fc02cdc369c1|-1301001980|/Users/fld713/Desktop/AdvancedR3/data/lipidomics.csv|t19334.4190355596s|6f631a918b070454|24313|file|local|vector|||0.054||
+generate_model_results|function|6a9305f91da0e052|||||||||||||||
 lipidomics|stem|6b48e6774467e8bd|7940706ee8ea8eb8|845f6234952721f6|-1170387675||t19334.4274364704s|30e7dd23cf8c9239|4884|rds|local|vector|||0.523||
+metabolites_to_wider|function|271536766124d4d0|||||||||||||||
 plot_count_stats|function|39b66953b4b2cc05|||||||||||||||
 plot_distributions|function|f02ad1ee39314fc6|||||||||||||||
-report_rmd|stem|130fdd0983279fca|0cd7c9f43e305493|54e7c3274b2881ee|-207608181|doc/report.html*doc/report.Rmd|t19334.5692247163s|e0044073746cf84f|861733|file|local|vector|||2.319||
+plot_estimates|function|75b5504a594f69e5|||||||||||||||
+report_rmd|stem|df35d9f2d88af360|9f048b507544dc62|5a3d33a17719f114|-207608181|doc/report.html*doc/report.Rmd|t19335.5540747563s|52fa27e3ae1affa6|976749|file|local|vector|||2.585||
+split_by_metabolite|function|2c39756057477543|||||||||||||||
+tidy_model_output|function|4ff0d9127acce476|||||||||||||||

@@ -1,12 +1,15 @@
 ---
-# Uses Quarto metadata: https://quarto.org/docs/journals/authors.html
-title: "R3advanced"
-author:
-  - name: ""
-    orcid: ""
+title: "Analysis of lipidomics dataset"
+format: html
+author: 
+  - name: Daniel T. Cervone
+    orcid: 0000-0001-5675-4985
+    email: daniel.cervone@gmail.com
     affiliations: 
-        - name: ""
-date: "`r Sys.Date()`"
+      - name: Novo Nordisk Foundation CBMR
+        address: Blegdamsvej 3B
+        city: København S
+        postal-code: 2300
 ---
 
 ```{r setup, include=FALSE}
@@ -44,6 +47,10 @@ tar_read(fig_gender_by_class)
 
 ```{r echo = FALSE}
 tar_read(fig_metabolite_distribution)
+```
+
+```{r echo = FALSE}
+tar_read(fig_model_estimates)
 ```
 
 # Conclusions

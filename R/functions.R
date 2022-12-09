@@ -138,12 +138,44 @@ generate_model_results <- function(data) {
 #'
 #' @return a data frame
 #'
-add_original_metabolite_names <- function(data, model_results) {
+add_original_metabolite_names <- function(model_results, data) {
   data %>%
-    select(metabolite) %>%
+    dplyr::select(metabolite) %>%
     dplyr::mutate(term = metabolite) %>%
     column_values_to_snakecase(term) %>%
-    dplyr::mutate(term = str_c("metabolite_", term)) %>%
+    dplyr::mutate(term = stringr::str_c("metabolite_", term)) %>%
     dplyr::distinct(term, metabolite) %>%
     dplyr::right_join(model_results, by = "term")
+}
+
+#' Title
+#'
+#' @param data
+#'
+#' @return
+#'
+calculate_estimates <- function(data) {
+  data %>%
+    split_by_metabolite() %>%
+    purrr::map_dfr(generate_model_results) %>%
+    dplyr::filter(stringr::str_detect(term, "metabolite_")) %>%
+    add_original_metabolite_names(data)
+}
+
+#' Title
+#'
+#' @param model_results
+#'
+#' @return
+#'
+plot_estimates <- function(results) {
+  results %>%
+    ggplot2::ggplot(ggplot2::aes(
+      x = estimate,
+      y = metabolite,
+      xmin = estimate - std.error,
+      xmax = estimate + std.error,
+    )) +
+    ggplot2::geom_pointrange() +
+  ggplot2::coord_fixed(xlim = c(0, 5))
 }

@@ -8,3 +8,5 @@ data-raw/nmr-omics/
 .Rbuildignore
 data/lipidomics.csv
 _targets
+
+/.quarto/

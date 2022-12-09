@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "doc/report.html",
+    "href": "doc/report.html",
+    "title": "Analysis of lipidomics dataset",
+    "section": "",
+    "text": "Abstract\nObjective:\nResearch Design and Methods:\nResults:\nConclusions:\n\n\nIntroduction\n\n\nResearch Design and Methods\n\n\nResults\n\n\n\nDescriptive statistics of metabolites.\n\n\n\n\n\n\n\n\n\nmetabolite\nvalue_mean\nvalue_sd\nvalue_iqr\nMeanSD\n\n\n\n\nCDCl3 (solvent)\n180.0\n67.0\n70.9\n180 (67)\n\n\nCholesterol\n18.6\n11.4\n19.0\n18.6 (11.4)\n\n\nFA -CH2CH2COO-\n33.6\n7.8\n11.3\n33.6 (7.8)\n\n\nLipid -CH2-\n536.6\n61.9\n119.1\n536.6 (61.9)\n\n\nLipid CH3- 1\n98.3\n73.8\n122.4\n98.3 (73.8)\n\n\nLipid CH3- 2\n168.2\n29.2\n27.3\n168.2 (29.2)\n\n\nMUFA+PUFA\n32.9\n16.1\n21.3\n32.9 (16.1)\n\n\nPhosphatidycholine\n31.7\n20.5\n32.7\n31.7 (20.5)\n\n\nPhosphatidylethanolamine\n10.0\n7.6\n13.0\n10 (7.6)\n\n\nPhospholipids\n2.7\n2.6\n5.0\n2.7 (2.6)\n\n\nPUFA\n30.0\n24.1\n14.3\n30 (24.1)\n\n\nTMS (interntal standard)\n123.0\n130.4\n184.8\n123 (130.4)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConclusions\n\n\nAcknowledgements\n\n\nReferences\n\n\nTables\n\n\nFigures\n\n\nSupplemental Material"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lipidomics Analysis",
+    "section": "",
+    "text": "Lipidomics study"
+  }
+]

@@ -14,20 +14,11 @@ library(tidyverse)
 library(targets)
 library(tidymodels)
 lipidomics <- targets::tar_read(lipidomics)
+model_estimates <- tar_read(df_model_estimates)
 source(here::here("R/functions.R"))
 ```
 
 ## Running multiple models
-
-```{r}
-model_estimates <- lipidomics %>%
-  split_by_metabolite() %>%
-  map_dfr(generate_model_results) %>%
-  filter(str_detect(term, "metabolite_"))
-model_estimates
-```
-
-## here
 
 ```{r}
 
