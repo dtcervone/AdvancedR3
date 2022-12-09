@@ -8,6 +8,7 @@ Depends:
     tidymodels,
     tidyverse
 Imports:
+    broom,
     distill,
     dplyr,
     fs,

@@ -88,3 +88,15 @@ create_model_workflow <- function(model_specs, recipe_specs) {
     workflows::add_model(model_specs) %>%
     workflows::add_recipe(recipe_specs)
 }
+
+#' Create a tidy output of model results
+#'
+#' @param workflow_fitted_model The model workflow object that's been fitted
+#'
+#' @return A data frame
+#'
+tidy_model_output <- function (workflow_fitted_model) {
+  workflow_fitted_model %>%
+    workflows::extract_fit_parsnip() %>%
+    broom::tidy(exponentiate = TRUE)
+}
