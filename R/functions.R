@@ -45,3 +45,20 @@ column_values_to_snakecase <- function(data, cols) {
   data %>%
     dplyr::mutate(dplyr::across({{ cols }}, snakecase::to_snake_case))
 }
+
+#' Covert pivot code to function
+#'
+#' @param data data with string columns
+#' @param values_fn account for several cholesterols
+#'
+#' @return one row for each participant (i.e. decrease row #, increase cols)
+metabolites_to_wider <- function(data, values_fn = mean) {
+  data %>%
+    mutate(metabolite = snakecase::to_snake_case(metabolite)) %>%
+    tidyr::pivot_wider(
+      names_from = metabolite,
+      values_from = value,
+      values_fn = values_fn,
+      names_prefix = "metabolite_"
+    )
+}

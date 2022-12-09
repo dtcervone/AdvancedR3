@@ -78,7 +78,7 @@ lipidomics %>%
   column_values_to_snakecase(metabolite)
 ```
 
-## Mutate the data
+## Mutate the data, create function for pivot wider
 
 ```{r}
 lipidomics_wide <- lipidomics %>%
