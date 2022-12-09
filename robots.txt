@@ -1,1 +1,1 @@
-Sitemap: https://github.com/dtcervone/AdvancedR3/sitemap.xml
+Sitemap: https://dtcervone.github.io/AdvancedR3/sitemap.xml
