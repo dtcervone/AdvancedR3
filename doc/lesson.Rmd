@@ -66,6 +66,18 @@ lipidomics %>%
   filter(n > 1)
 ```
 
+## Use curly curly to apply snakecase to columns of our choice, not just metabolite #nolint
+
+```{r}
+column_values_to_snakecase <- function(data, cols) {
+  data %>%
+    dplyr::mutate(dplyr::across({{ cols }}, snakecase::to_snake_case))
+}
+
+lipidomics %>%
+  column_values_to_snakecase(metabolite)
+```
+
 ## Mutate the data
 
 ```{r}
@@ -80,13 +92,6 @@ lipidomics_wide <- lipidomics %>%
 lipidomics_wide
 ```
 
-## Create function for var to snakecase
+#Create function for var to snakecase
 
-```{r}
-metabolite_values_to_snakecase <- function(data) {
-  data %>% 
-    dplyr::mutate(metabolite = snakecase::to_snake_case(metabolite))
-}
-lipidomics %>% 
-  metabolite_values_to_snakecase
-```
+\#`{r} #metabolite_values_to_snakecase <- function(data) { #  data %>%  #    dplyr::mutate(metabolite = snakecase::to_snake_case(metabolite)) #} #lipidomics %>%  #  metabolite_values_to_snakecase() #`

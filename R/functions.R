@@ -34,13 +34,14 @@ plot_distributions <- function(data) {
     ggplot2::facet_wrap(ggplot2::vars(metabolite), scales = "free")
 }
 
+#' Curly curly to apply snakecase across columns of our choice
+#'
+#' @param data data with string columns
+#' @param cols columns to convert into snakecase
+#'
+#' @return data frame in snakecase
 
-#' Function for mutating column of interest
-#'
-#' @param data Lipidomics metabolite column data
-#'
-#' @return wide version of data table
-metabolite_values_to_snakecase <- function(data) {
+column_values_to_snakecase <- function(data, cols) {
   data %>%
-    dplyr::mutate(metabolite = snakecase::to_snake_case(metabolite))
+    dplyr::mutate(dplyr::across({{ cols }}, snakecase::to_snake_case))
 }
