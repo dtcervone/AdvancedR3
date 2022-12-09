@@ -10,3 +10,4 @@ data/lipidomics.csv
 _targets
 
 /.quarto/
+_site
