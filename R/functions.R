@@ -62,3 +62,16 @@ metabolites_to_wider <- function(data, values_fn = mean) {
       names_prefix = "metabolite_"
     )
 }
+
+#' Transformation recipe to pre-process the data
+#'
+#' @param data Lipidomics dataset
+#' @param metabolite_variable Column of the metabolite variable
+#'
+#' @return
+create_recipe_spec <- function(data, metabolite_variable) {
+  recipes::recipe(data) %>%
+    recipes::update_role({{ metabolite_variable }}, age, gender, new_role = "predictor") %>%
+    recipes::update_role(class, new_role = "outcome") %>%
+    recipes::step_normalize(tidyselect::starts_with("metabolite_"))
+}

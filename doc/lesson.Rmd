@@ -92,6 +92,11 @@ lipidomics_wide <- lipidomics %>%
 lipidomics_wide
 ```
 
-#Create function for var to snakecase
+## Transforming data
 
-\#`{r} #metabolite_values_to_snakecase <- function(data) { #  data %>%  #    dplyr::mutate(metabolite = snakecase::to_snake_case(metabolite)) #} #lipidomics %>%  #  metabolite_values_to_snakecase() #`
+```{r}
+  recipes::recipe(data) %>% 
+  recipes::update_role({{metabolite_variable}}, age, gender, new_role = "predictors") %>% 
+  recipes::update_role(class, new_role = "outcome") %>% 
+  recipes::step_normalize(tidyselect::starts_with("metabolite_"))
+```
